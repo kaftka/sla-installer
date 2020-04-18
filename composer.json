@@ -8,7 +8,7 @@
     "require": {
         "php": ">=7.1.0",
         "silverstripe/recipe-plugin": "^1.2",
-        "silverstripe/recipe-sla": "4.x-dev",
+        "kaftka/recipe-sla": "dev-master",
         "silverstripe/login-forms": "^4.0"
     },
     "require-dev": {
