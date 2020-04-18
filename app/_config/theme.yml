@@ -1,0 +1,14 @@
+---
+Name: mytheme
+---
+SilverStripe\View\SSViewer:
+  themes:
+    - '$public'
+    - 'sla'
+    - '$default'
+SilverStripe\i18n\i18n:
+  default_locale: 'en_US'
+
+Heyday\MenuManager\MenuSet:
+  default_sets:
+    - Footer

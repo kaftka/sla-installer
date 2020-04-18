@@ -1,0 +1,5 @@
+---
+Name: email
+---
+SilverStripe\Control\Email\Email:
+  admin_email: 'no-reply@stevenlloydarchitecture.co.nz'
