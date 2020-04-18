@@ -1,0 +1,130 @@
+.element-featured-project {
+    width:100%;
+}
+@media screen and (min-width: 969px) {
+    .element-featured-project--image {
+        width: 50%;
+    }
+    .element-featured-project--details {
+        width:50%;
+    }
+}
+    .element-featured-project--image__link {
+        max-width:calc(100% + 4rem);
+    }
+
+.element-featured-project--details > .details {
+    padding-left: 8rem;
+}
+
+.banner-element {
+    width:100%;
+    padding-top: 8rem;
+    padding-bottom:8rem;
+    position:relative;
+    overflow:hidden;
+}
+.banner-element > * {
+    position:relative;
+    z-index:1;
+}
+.banner-element.background-primary { --bgColor: var(--primary); --textColor: var(--white) }
+.banner-element.background-secondary { --bgColor: var(--secondary); --textColor: var(--white) }
+.banner-element.background-black { --bgColor: var(--black); --textColor: var(--white) }
+.banner-element.background-white { --bgColor: var(--white); --textColor: var(--black) }
+
+.banner-element.background-image::before,
+.banner-element.background-image::after {
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.banner-element.background-image::before {
+    background-image: linear-gradient(90deg, var(--bgColor) 25%, transparent 150%);
+    opacity:0.8;
+    transition:all 0.6s;
+}
+    .banner-element.background-image.Left::before {
+        background-image: linear-gradient(270deg, var(--bgColor) 25%, transparent 150%);
+    }
+.banner-element.background-image:hover::before {
+    opacity:0;
+    transition:all 2s;
+}
+.banner-element.background-image::after {
+    background-image: linear-gradient(70deg, var(--bgColor) 20%, transparent 80%);
+    opacity:0;
+    transition:all 2s;
+}
+    .banner-element.background-image.Left::after {
+        background-image: linear-gradient(310deg, var(--bgColor) 20%, transparent 80%);
+    }
+.banner-element.background-image:hover::after {
+    opacity:1;
+    transition:all 0.6s;
+}
+
+/*Banner Full-height variant*/
+.banner-element.Full-height {
+    height:auto;
+}
+.banner-element.Full-height .order-2 > .image-link {
+    margin:2rem -2rem 0 -2rem;
+}
+.banner-element.Full-height .image-link figure {
+    height:100%;
+    margin:0;
+}
+@media screen and (min-width: 969px) {
+    .banner-element.Full-height {
+        height:calc(100vh - 16rem);
+    }
+
+    .banner-element.Full-height .image-link {
+        height:calc(100% + 16rem);
+        margin:-8rem 0 -8rem -2rem;
+    }
+    .banner-element.Full-height .order-2 > .image-link {
+        margin:-8rem -2rem -8rem 0;
+    }
+}
+
+
+.image-link,
+.image-link > figure {
+    position:relative;
+    display:block;
+    overflow:hidden;
+    width:auto;
+    margin:0;
+}
+.image-link > img,
+.image-link > figure > img {
+    display:block;
+    transition:transform 0.6s;
+}
+.image-link:hover > img,
+.image-link:hover > figure > img {
+    transform: scale(1.05);
+}
+
+.image-link > figure > figcaption {
+    position:absolute;
+    padding:1.5rem 2rem;
+    bottom:0;
+    width:auto;
+    max-width:80%;
+    height:auto;
+    background-color:var(--bgColor);
+    color:var(--bgColor);
+    transform:translateY(100%) translateX(-50%);
+    transition:transform .4s .4s, color .4s;
+}
+.image-link:hover > figure > figcaption {
+    transform:translateY(0) translateX(0);
+    color:var(--textColor);
+    transition: color .4s .4s, transform .4s
+}

@@ -1,0 +1,42 @@
+body {
+    font-family: "Fira Sans", sans-serif;
+    font-size:18px;
+    line-height: 1.6;
+}
+h1, h2, h3, h4, h5 {
+    font-family: "Merriweather", serif;
+    font-weight:700;
+}
+
+h1 { font-size: 4rem; --featured: 16rem; }
+    h1.featured { font-size:6rem; }
+h2 { font-size: 3.2rem; --featured: 12.8rem; }
+    h2.featured { font-size:4rem; }
+h3 { font-size: 2.4rem; --featured: 2.4rem; }
+    h3.featured { font-size:3rem; }
+h4 { font-size: 2rem; --featured: 2rem; }
+    h4.featured { font-size:2.4rem; }
+h5 { font-size: 1.4rem; --featured: 1.4rem; }
+    h5.featured { font-size:1.8rem; }
+
+.lead {
+    font-size:1.4rem;
+    line-height:2.4rem
+}
+.featured {
+    position:relative;
+    z-index:1;
+}
+.featured::before {
+    content:'';
+    width: var(--featured);
+    height:var(--featured);
+    background-color:var(--primary);
+    position:absolute;
+    left:calc(var(--featured) / -1.6);
+    top: 0;
+    z-index:-1;
+}
+    .background-primary .featured::before {
+        background-color: var(--secondary);
+    }
