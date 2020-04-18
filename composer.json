@@ -1,0 +1,34 @@
+{
+    "name": "kaftka/sla-installer",
+    "type": "silverstripe-recipe",
+    "description": "installer for sla",
+    "repositories": [
+        { "url": "https://github.com/cladonline/recipe-sla.git", "type": "vcs" }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "silverstripe/recipe-plugin": "^1.2",
+        "silverstripe/recipe-sla": "4.x-dev",
+        "silverstripe/login-forms": "^4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "sminnee/phpunit-mock-objects": "^3.4.5"
+    },
+    "extra": {
+        "project-files": [
+            "app/_config/*",
+            ".env.example"
+        ],
+        "public-files": [
+            "assets/*",
+            "favicon.ico"
+        ],
+        "resources-dir": "_resources"
+    },
+    "config": {
+        "process-timeout": 600
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
