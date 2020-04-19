@@ -69,11 +69,11 @@ class ProjectPage extends Page
             'Images'
         ]);
 
-        $project = $this->ProjectTitle;
 
-        if (!$this->isInDB()) {
+        if (!$this->isInDB() || $this->Title == 'New Project Page') {
             $uploadField = LiteralField::create('', '<div class="alert alert-warning">Save this page to upload gallery images.</div>');
         } else {
+            $project = $this->Title;
             $uploadField = SortableUploadField::create('Images', 'Images')
                         ->setFolderName("Projects/{$project}/Images");
         }
