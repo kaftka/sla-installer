@@ -1,0 +1,65 @@
+{
+    "name": "kaftka/sla-installer",
+    "type": "silverstripe-recipe",
+    "description": "installer for sla",
+    "repositories": [
+        { "url": "https://github.com/cladonline/theme-sla.git", "type": "vcs" }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "silverstripe/recipe-plugin": "^1.2",
+        "silverstripe/recipe-cms": "^4.5.2",
+        "dnadesign/silverstripe-elemental": "^4.3.2",
+        "dnadesign/silverstripe-elemental-userforms": "^3.0.0",
+        "jonom/silverstripe-betternavigator": "^5.0.1",
+        "silverstripe/sharedraftcontent": "^2.3",
+        "jonom/focuspoint": "^3.1.1",
+        "bringyourownideas/silverstripe-maintenance": "^2.3",
+        "bringyourownideas/silverstripe-composer-security-checker": "^2.0",
+        "bringyourownideas/silverstripe-composer-update-checker": "^2.0",
+        "heyday/silverstripe-menumanager": "^3.0.5",
+        "sminnee/tagmanager": "^1.0.0",
+        "benmanu/silverstripe-simple-styleguide": "^2.1",
+        "silverstripe/login-forms": "^4.1.2",
+        "silverstripe/blog": "^3.5",
+        "symbiote/silverstripe-advancedworkflow": "^5.2",
+        "wilr/silverstripe-googlesitemaps": "^2.1.5",
+        "silverstripe/theme-colorpicker": "^1",
+        "silverstripe/theme-fontpicker": "^1",
+        "tractorcow/silverstripe-fluent": "^4.4.5",
+        "symfony/process": "^3.2",
+        "silverstripe/fulltextsearch": "^3.6",
+        "tractorcow/silverstripe-colorpicker": "^4",
+        "colymba/gridfield-bulk-editing-tools": "^3",
+        "dnadesign/silverstripe-elemental-virtual": "^1.2.2",
+        "bummzack/sortablefile": "2.1.3",
+        "kaftka/theme-sla": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "sminnee/phpunit-mock-objects": "^3.4.5"
+    },
+    "extra": {
+        "project-files-installed": [
+            "app/*",
+            ".env.example"
+        ],
+        "public-files": [
+            "assets/*",
+            "favicon.ico"
+        ],
+        "public-files-installed": [
+            ".htaccess",
+            "index.php",
+            "install-frameworkmissing.html",
+            "install.php",
+            "web.config"
+        ],
+        "resources-dir": "_resources"
+    },
+    "config": {
+        "process-timeout": 600
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}

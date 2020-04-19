@@ -1,0 +1,53 @@
+---
+Name: myproject
+---
+SilverStripe\Core\Manifest\ModuleManifest:
+  project: app
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - SLloyd\Architecture\Extensions\SiteConfigExtension
+  enable_theme_color_picker: true
+  theme_colors:
+    default-accent:
+      Color: "#C74247"
+    default-background:
+      Color: "#FFFFFF"
+  theme_fonts:
+    metropolis: Metropolis
+    nunito-sans: Nunito Sans
+    fira-sans: Fira Sans
+    merriweather: Merriweather
+
+SilverStripe\Fontpicker\Forms\FontPickerField:
+  default_font: fira-sans
+
+SilverStripe\ORM\Connect\MySQLDatabase:
+  connection_charset: utf8mb4
+  connection_collation: utf8mb4_general_ci
+  charset: utf8mb4
+  collation: utf8mb4_general_ci
+
+Symbiote\AdvancedWorkflow\Actions\NotifyUsersWorkflowAction:
+  whitelist_template_variables: true
+
+SilverStripe\CMS\Model\SiteTree:
+  extensions:
+    - Symbiote\AdvancedWorkflow\Extensions\WorkflowEmbargoExpiryExtension
+
+SilverStripe\View\Parsers\URLSegmentFilter:
+  default_allow_multibyte: true
+
+
+SilverStripe\Assets\Image:
+  belongs_many_many:
+    ProjectPages: SLloyd\Architecture\PortfolioPage.Images
+  extensions:
+    - SLloyd\Architecture\Extensions\ImageExtension
+SilverStripe\AssetAdmin\Forms\FileFormFactory:
+  extensions:
+    - SLloyd\Architecture\Extensions\FileFormFactoryExtension
+
+DNADesign\Elemental\Models\ElementContent:
+  extensions:
+    - SLloyd\Architecture\Extensions\ElementContentExtension
