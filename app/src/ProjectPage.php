@@ -13,6 +13,7 @@ use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\TextField;
+use SilverStripe\ORM\PaginatedList;
 use SLloyd\Architecture\Elements\BannerElement;
 use SLloyd\Architecture\Elements\FeaturedProject;
 use SLloyd\Architecture\Elements\ProjectHeader;
@@ -140,5 +141,11 @@ class ProjectPage extends Page
             return null;
         }
         return $this->Images()->sort('SortOrder', 'ASC')->first();
+    }
+
+    public function getShortDescription() {
+        if ($this->getField('ShortDescription')) {
+            return $this->getField('ShortDescription');
+        }
     }
 }
