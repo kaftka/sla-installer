@@ -6,6 +6,7 @@ namespace SLloyd\Architecture;
 
 use SilverStripe\Lumberjack\Model\Lumberjack;
 use SilverStripe\ORM\DB;
+use SilverStripe\ORM\PaginatedList;
 use SilverStripe\Versioned\Versioned;
 
 class ProjectHolder extends \Page
@@ -37,5 +38,16 @@ class ProjectHolder extends \Page
     public function canDelete($member = null)
     {
         return false;
+    }
+
+
+    public function getPaginatedProjects() {
+        $kids = $this->Children();
+        if ($kids) {
+            $list = PaginatedList::create($kids);
+
+            return $list;
+        }
+        return null;
     }
 }
