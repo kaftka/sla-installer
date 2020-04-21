@@ -16,6 +16,7 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\PaginatedList;
 use SLloyd\Architecture\Elements\BannerElement;
 use SLloyd\Architecture\Elements\FeaturedProject;
+use SLloyd\Architecture\Elements\GalleryElement;
 use SLloyd\Architecture\Elements\ProjectHeader;
 
 class ProjectPage extends Page
@@ -120,6 +121,10 @@ class ProjectPage extends Page
             $defaultContent = ElementContent::create();
             $defaultContent->ParentID = $content->ID;
             $defaultContent->write();
+
+            $gallery = GalleryElement::create();
+            $gallery->ParentID = $content->ID;
+            $gallery->write();
         }
     }
 

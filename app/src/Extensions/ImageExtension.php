@@ -25,4 +25,31 @@ class ImageExtension extends DataExtension
         ]);
     }
 
+    public function GalleryX($size = 'L')
+    {
+        if ($this->owner->getOrientation() == 2) {
+            return
+                ($size == 'S') ? 400 :
+                    ($size == 'M') ? 600 :
+                        900;
+        }
+        return
+            ($size == 'S') ? 600 :
+                ($size == 'M') ? 900 :
+                    1350;
+    }
+
+    public function GalleryY($size = 'L')
+    {
+        if ($this->owner->getOrientation() == 2) {
+            return
+                ($size == 'S') ? 600 :
+                    ($size == 'M') ? 900 :
+                        1350;
+        }
+        return
+            ($size == 'S') ? 400 :
+                ($size == 'M') ? 600 :
+                    900;
+    }
 }

@@ -17,9 +17,6 @@ class ProjectHolder extends \Page
         ProjectPage::class
     ];
 
-    private static $extensions = [
-        Lumberjack::class
-    ];
 
     public function requireDefaultRecords()
     {
