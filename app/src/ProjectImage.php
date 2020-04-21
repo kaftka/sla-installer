@@ -8,6 +8,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Versioned\Versioned;
+use SLloyd\Architecture\Elements\GalleryElement;
 
 class ProjectImage extends DataObject
 {
