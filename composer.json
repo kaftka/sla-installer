@@ -33,7 +33,7 @@
         "colymba/gridfield-bulk-editing-tools": "^3",
         "dnadesign/silverstripe-elemental-virtual": "^1.2.2",
         "bummzack/sortablefile": "2.1.3",
-        "kaftka/theme-sla": "dev-master"
+        "kaftka/theme-sla": "^2.0.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7",
