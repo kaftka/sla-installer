@@ -36,7 +36,7 @@ class FeaturedProject extends BaseElement
 
     public function getFeaturedProject() {
         if ($this->GetLatest) {
-            return ProjectPage::get()->last();
+            return ProjectPage::get()->sort('Sort','ASC')->first();
         }
         if ($this->ProjectID) {
             return $this->Project();

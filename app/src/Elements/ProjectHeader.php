@@ -15,7 +15,7 @@ class ProjectHeader extends BaseElement
 
     private static $db = [
         'Content' => 'Text',
-        'BackgroundColor' => "Enum('Primary, Secondary, White, Black', 'Primary)",
+        'BackgroundColor' => "Enum('White, Primary, Secondary, Black', 'White')",
         'ImagePosition' => "Enum('Left, Right', 'Left')"
     ];
 
