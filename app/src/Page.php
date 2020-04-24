@@ -28,6 +28,10 @@ namespace {
         public function getCMSFields()
         {
             $fields = parent::getCMSFields();
+            if ($this->ClassName === 'SilverStripe\CMS\Model\RedirectorPage') {
+                return $fields;
+            }
+
             $headerArea = $fields->fieldByName('Root.Main.HeaderElements');
             $fields->removeByName('Root.Main.HeaderElements');
             $fields->addFieldToTab('Root.Main', $headerArea, 'ElementalArea');
@@ -41,6 +45,7 @@ namespace {
                 HeaderField::create('ContentBlocksHeader', 'Content blocks'),
                 'ElementalArea'
             );
+
             return $fields;
         }
 
